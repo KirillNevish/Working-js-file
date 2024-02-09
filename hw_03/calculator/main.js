@@ -3,19 +3,19 @@ let b = 2;
 
 function summ(firstNumber, secondNumber){
     if(firstNumber === 0){
-        
+        alert('warning! you cant use 0')
     }
     else if(secondNumber === 0){
         alert('warning! you cant use 0')
     }
+    else(
+        console.log('')
+    )
     console.log(`Summ ${firstNumber} + ${secondNumber} = ${firstNumber+secondNumber}`);
 }
 
 
-summ(a, b);
-summ(10, 20);            
-summ(true, '20');
-summ(true, false);
+
 
 
 let userFirstNumber = Number(prompt('Type number'));
@@ -28,6 +28,9 @@ function minus(firstNumberMinus, secondNumberMinus){
     else if(secondNumberMinus === 0){
         alert('warning! you cant use 0')
     }
+    else(
+        console.log('')
+    )
     console.log(`Minus ${firstNumberMinus} - ${secondNumberMinus} = ${firstNumberMinus-secondNumberMinus}`);
 }
 
@@ -38,6 +41,9 @@ function divide(firstNumberDivide, secondNumberDivide){
     else if(secondNumberDivide === 0){
         alert('warning! you cant use 0')
     }
+    else(
+        console.log('')
+    )
     console.log(`Divide ${firstNumberDivide} / ${secondNumberDivide} = ${firstNumberDivide/secondNumberDivide}`);
 }
 
@@ -48,6 +54,9 @@ function multiplitaciton(firstNumberMult, secondNumberMult){
     else if(secondNumberMult === 0){
         alert('warning! you cant use 0')
     }
+    else(
+        console.log('')
+    )
     console.log(`Multiplication ${firstNumberMult} * ${secondNumberMult} = ${firstNumberMult*secondNumberMult}`);
 }
 
