@@ -14,7 +14,7 @@ else if('Камінь', 1 && 'Папір', 0 && 'Ножниці', 2){
     console.log('Перемога');
 }
 else(
-    console.log('Зрада')
+    console.log('ви не виграли')
 )
 
 // console.log(());
