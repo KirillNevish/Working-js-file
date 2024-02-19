@@ -8,5 +8,5 @@ function filter(array){
         }
     })
     return(Value)
-}
+} 
 console.log(filter(numberArr));
