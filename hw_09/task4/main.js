@@ -19,7 +19,8 @@ window.onload = function(){
     let [...alldiv]=document.querySelectorAll('div');
     alldiv.forEach(div=>{
         div.onclick=function(){ 
-            this.setAttribute('style','display: none;');
+            // this.setAttribute('style','display: none;');
+            div.remove()
         }
     });
 }
