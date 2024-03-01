@@ -7,7 +7,7 @@ window.onload = function(){
     let body = document.querySelector('body');
     for(let i=0; i<11; i++){
         let innerDiv = document.createElement('div');
-        innerDiv.innerHTML = 'hi';
+        innerDiv.innerHTML = `hi ${i}`;
     
         innerDiv.style.borderRadius = '6px'; 
         innerDiv.style.width = '50px'; 
