@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        div{
+            background-color: grey;
+            width: 250px;
+            margin: 0% auto;
+            margin-top: 100px;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+        body{
+            background-color: burlywood;
+        }
+        button{
+            font-size: 20px;
+            margin: 20px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        input{
+            border-radius: 5px;
+            width: 200px;
+        }
+        ul{
+            margin: 3px;
+        }
+        li{
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-item">
+        <label for="username">Username:</label><br>
+        <input type="text" placeholder="You123" id="username" name="username"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" placeholder="you@example.com" id="email" name="email">
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone">
+        <label for="pwd">Password:</label><br>
+        <input type="text" id="password" name="pwd">
+        <ul>
+            <li>8 - 20 letters</li>
+            <li>A-Z</li>
+            <li>a-z</li>
+            <li>0-9</li>
+            <li>[!@#$%&*]</li>
+        </ul>
+        <label for="repeatpwd">Confirm password:</label><br>
+        <input type="text" id="repeatpassword" name="repeatpwd">
+        <button disabled>Submit</button>
+    </div>
+</body>
+</html>
