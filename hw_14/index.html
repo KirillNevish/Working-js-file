@@ -6,7 +6,7 @@
     <title>Document</title>
     <script src="script.js"></script>
     <style>
-        div{
+        .form-item{
             background-color: grey;
             width: 250px;
             margin: 0% auto;
@@ -34,9 +34,68 @@
             font-size: 20px;
             color: black;
         }
+        .loading{
+            display: none;
+            width: 400px;
+            height: 400px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+        @keyframes LoadingAnimation {
+            0%{
+                background-color: blue;
+                top: 0;
+                left: 0;
+            }
+            25%{
+                background-color: red;
+                top: 0;
+                left: 250px;
+            }
+            50%{
+                background-color: green;
+                top: 250px;
+                left: 250px;
+            }
+            75%{
+                background-color: palevioletred;
+                top: 250px; 
+                left: 0px;
+            }
+            100%{
+                background-color: orange;
+                top: 0px;
+                left: 0px;
+            } 
+        }
+
+        .simple{
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: blue;
+            position: absolute;
+            animation-name: LoadingAnimation;
+            animation-duration: 5s;
+            /* animation-iteration-count: 3; */ 
+            animation-iteration-count: infinite;
+            }
+
+        .simple.second{
+            border-radius: 10px;
+            animation-direction: reverse; 
+            animation-duration: 5s;
+}
     </style>
 </head>
 <body>
+    <div class="loading">
+        <div class="simple"></div>
+
+        <div class="simple second"></div>
+    </div>
     <div class="form-item">
         <label for="username">Username:</label><br>
         <input type="text" placeholder="You123" id="username" name="username"><br>

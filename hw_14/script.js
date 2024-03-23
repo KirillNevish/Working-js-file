@@ -1,5 +1,6 @@
 window.onload = function(){
     let btnel = document.querySelector('button')
+    let loadingEl = document.querySelector('.loading')
  
     function checkName(value){
         let testUsername =  /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{4,9}$/;
@@ -26,23 +27,33 @@ window.onload = function(){
         return testrepeatPass.test(value);
     }
     
-    btnel.addEventListener('mouseover', function(){
+    btnel.addEventListener('mouseover', function() {
         let usernameel = document.querySelector('input[name="username"]').value;
         let emailel = document.querySelector('input[name="email"]').value;
         let phoneel = document.querySelector('input[name="phone"]').value;
         let passwordel = document.querySelector('input[name="pwd"]').value;
-        let repeatpasswordel = document.querySelector('input[name="repeatpwd"]').value
-        if(checkName(usernameel) && checkEmail(emailel) && checkPhone(phoneel) && checkPassword(passwordel) && checkPassword(passwordel) === repeatcheckPassword(repeatpasswordel)){                              
-            btnel.removeAttribute('disabled')
-            btnel.innerHTML = 'Submit'
-        }
-        else{
+        let repeatpasswordel = document.querySelector('input[name="repeatpwd"]').value;
+    
+        if (
+            checkName(usernameel) &&
+            checkEmail(emailel) &&
+            checkPhone(phoneel) &&
+            checkPassword(passwordel) &&
+            checkPassword(passwordel) === repeatcheckPassword(repeatpasswordel)
+        ){
+            btnel.removeAttribute('disabled');
+            btnel.innerHTML = 'Submit';
+        } 
+        else {
             btnel.setAttribute('disabled', 'disabled');
         }
-    })
+    });
+
     btnel.onclick = function(){
+        loadingEl.style.display = 'block';
         setTimeout(()=>{
+            loadingEl.style.display = 'none';
             alert('Submit was succefful!');
-        }, 2000);
+        }, 5000);
     }
 }
