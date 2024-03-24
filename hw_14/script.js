@@ -3,7 +3,8 @@ window.onload = function(){
     let loadingEl = document.querySelector('.loading')
  
     function checkName(value){
-        let testUsername =  /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{4,9}$/;
+        // let testUsername =  /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{4,9}$/;
+        let testUsername = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d?).{4,9}$/;
         return testUsername.test(value);
     }
 
@@ -21,13 +22,7 @@ window.onload = function(){
         let testPass =  /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*]).{8,20}$/;
         return testPass.test(value);
     }
-
-    function repeatcheckPassword(value){
-        let testrepeatPass =  /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*]).{8,20}$/;
-        return testrepeatPass.test(value);
-    }
-    
-    btnel.addEventListener('mouseover', function() {
+    document.querySelector('.form-item').addEventListener('change', function(){
         let usernameel = document.querySelector('input[name="username"]').value;
         let emailel = document.querySelector('input[name="email"]').value;
         let phoneel = document.querySelector('input[name="phone"]').value;
@@ -39,7 +34,7 @@ window.onload = function(){
             checkEmail(emailel) &&
             checkPhone(phoneel) &&
             checkPassword(passwordel) &&
-            checkPassword(passwordel) === repeatcheckPassword(repeatpasswordel)
+            passwordel === repeatpasswordel
         ){
             btnel.removeAttribute('disabled');
             btnel.innerHTML = 'Submit';
@@ -47,7 +42,7 @@ window.onload = function(){
         else {
             btnel.setAttribute('disabled', 'disabled');
         }
-    });
+    })
 
     btnel.onclick = function(){
         loadingEl.style.display = 'block';
