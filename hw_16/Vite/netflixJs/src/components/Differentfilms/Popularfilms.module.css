@@ -1,0 +1,70 @@
+.popthisweek{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    max-height: 34px; 
+    max-width: 100%;  
+}
+.textend{
+    display: flex;
+    align-self: center;
+    width: 100%;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 144.523%; 
+    letter-spacing: 2.97px;
+}
+.buttonsend{
+    display: flex;
+    gap: 20px;
+    
+}
+.buttonsend button{
+ color: #FFF;
+}
+
+.buttonfirst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34.85px;
+    max-height: 34.85px;
+    border-radius: 16px;
+    border-color: #FFF;
+    background-color: transparent;
+    font-size: 20px;
+}
+.buttonsecond{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34.85px;
+    max-height: 34.85px;
+    border-radius: 16px;
+    border-color: #FFF;
+    background-color: transparent;
+    font-size: 20px;
+}
+.buttonfirst:hover{
+    border-color: #A7A6A6;
+}
+.buttonfirst:first-child:hover{
+    color: #A7A6A6;
+}
+.buttonsecond:hover{
+    border-color: #A7A6A6;
+}
+.buttonsecond:last-child:hover{
+    color: #A7A6A6;
+}
+.films{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 21px;
+}
+.film{
+    max-width: 15.2%;
+}

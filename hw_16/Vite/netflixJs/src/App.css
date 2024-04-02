@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0 auto;
+  background-color: black;
+  background-image: url('mainbgimage/Rectanglemain.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;    
+
+}
+
+.maintext{
+  align-items: center;
+  width: 100%;
+  max-height: 100%;
+}
+
+.strangerthingsmt{
+  max-width: 60%;
+  max-height: 910px;
+  margin-left: 80px;
+}

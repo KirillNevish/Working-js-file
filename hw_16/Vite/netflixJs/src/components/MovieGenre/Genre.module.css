@@ -1,0 +1,31 @@
+.alltypes{
+    margin-top: 80px;
+    display: flex;
+    gap: 11px;
+}
+.types{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.types::after{
+    content: ".";                                        
+    display: inline-block;                                                                       
+    color: #FFF;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+@media(max-width:890px){
+    .types{
+        font-size: 19px;
+    }
+}
+@media(max-width:560px){
+    .types::after{
+        display: none;
+    }
+}
